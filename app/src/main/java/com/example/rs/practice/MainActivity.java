@@ -1,11 +1,13 @@
 package com.example.rs.practice;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.view.View;
 
 public class MainActivity extends FragmentActivity //step1 = extends to fragment activity
  {
@@ -20,8 +22,15 @@ public class MainActivity extends FragmentActivity //step1 = extends to fragment
 
         FragmentManager fragmentManager = getSupportFragmentManager();//step10 = create a fragment manager to give its support to the view pager adapter
         viewpager.setAdapter(new CreatedAdapter(fragmentManager)); //step9 = we have to intialize the created adapter to our view pager & parameter as fragment manager support which is intialized in step10
+
+
     }
 }
+
+
+
+
+
 
 class CreatedAdapter extends FragmentPagerAdapter{ //step4 = create an adapter class which is used to switch between between fragments or pages
 
